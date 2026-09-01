@@ -45,7 +45,7 @@ The platform analyzes a user's career-related information and provides personali
 - Node.js
 - Express.js
 
-# AI
+## AI
 
 - AI integration for career analysis and interview-related features
 
