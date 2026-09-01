@@ -1,32 +1,32 @@
-#CareerAI
+# CareerAI
 
 CareerAI is an AI-powered career assistance platform designed to help students understand their career readiness, identify skill gaps, and improve their interview preparation.
 
 The platform analyzes a user's career-related information and provides personalized insights, recommended skills, and mock interview practice. It combines a user-friendly frontend with a Node.js backend to create an interactive career guidance experience.
 
-#Features
+# Features
 
-##Resume & Career Analysis
+## Resume & Career Analysis
 
 - Analyze career-related information and identify relevant skills.
 - Generate an overall career readiness score.
 - Identify missing or underdeveloped skills.
 - Provide personalized career insights.
 
-#Skill Gap Analysis
+# Skill Gap Analysis
 
 - Categorizes skills into different areas such as DSA, programming, and web development.
 - Identifies areas that require improvement.
 - Recommends skills based on the user's current profile.
 
-#AI-Powered Mock Interview
+# AI-Powered Mock Interview
 
 - Practice technical interview questions.
 - Submit answers through the platform.
 - Receive performance-based feedback and scoring.
 - Helps users identify areas for improvement before real interviews.
 
-#Personalized Recommendations
+# Personalized Recommendations
 
 - Provides recommendations based on the user's current skills.
 - Highlights skills that can improve career readiness.
