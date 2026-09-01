@@ -71,11 +71,12 @@ CareerAI/
 5. Personalized recommendations are generated.
 6. Users can practice through the mock interview feature and receive a performance score.
 
-# Getting Started
+## Getting Started
 
-## 1. Clone the repository
-
-git clone <your-repository-url>
+### 1. Clone the repository
+```bash
+git clone https://github.com/shrirakshashenoy197/CareerAI
+.git
 
 ## 2. Navigate to the project
 
