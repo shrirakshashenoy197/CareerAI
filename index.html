@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI | AI-Powered Career Preparation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Career<span>AI</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+            </ul>
+
+            <button class="login-btn">Get Started</button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+    <!-- ================= HERO / MAIN SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">
+                AI-POWERED CAREER PREPARATION
+            </p>
+
+            <h1>
+                Build Your Career
+                <span>With AI</span>
+            </h1>
+
+            <p class="hero-description">
+                Analyze your resume, identify missing skills,
+                practice interviews and get personalized career
+                guidance with the power of AI.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+                    Analyze My Resume
+                </button>
+
+                <button class="secondary-btn">
+                    Practice Interview
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===============================
+     MOCK INTERVIEW
+================================ -->
+
+<section id="mock-interview" class="mock-interview">
+
+    <div class="section-heading">
+        <p>AI MOCK INTERVIEW</p>
+        <h2>Practice Like a Real Interview</h2>
+    </div>
+
+    <div class="mock-interview-card">
+
+        <div class="interview-top">
+
+            <div>
+                <span class="card-label">INTERVIEW PRACTICE</span>
+                <h3 id="mockQuestion">
+                    Select a role to start your interview.
+                </h3>
+            </div>
+
+            <span id="questionNumber" class="question-number">
+                Question 0/5
+            </span>
+
+        </div>
+
+
+        <!-- Interview Controls -->
+
+        <div id="interviewSetup" class="interview-setup">
+
+            <label for="mockRole">
+                Select Target Role
+            </label>
+
+            <select id="mockRole">
+
+                <option value="software engineer">
+                    Software Engineer
+                </option>
+
+                <option value="frontend developer">
+                    Frontend Developer
+                </option>
+
+                <option value="backend developer">
+                    Backend Developer
+                </option>
+
+                <option value="full stack developer">
+                    Full Stack Developer
+                </option>
+
+                <option value="data scientist">
+                    Data Scientist
+                </option>
+
+                <option value="machine learning engineer">
+                    Machine Learning Engineer
+                </option>
+
+            </select>
+
+
+            <label for="interviewType">
+                Interview Type
+            </label>
+
+            <select id="interviewType">
+
+                <option value="technical">
+                    Technical
+                </option>
+
+                <option value="behavioral">
+                    Behavioral
+                </option>
+
+            </select>
+
+
+            <button id="startInterview" class="primary-btn">
+                Start Mock Interview
+            </button>
+
+        </div>
+
+
+        <!-- Question Area -->
+
+        <div
+            id="mockQuestionArea"
+            class="mock-question-area"
+            style="display:none;"
+        >
+
+            <div class="question-box">
+
+                <span>INTERVIEW QUESTION</span>
+
+                <h3 id="questionText">
+                    Question will appear here.
+                </h3>
+
+            </div>
+
+
+            <textarea
+                id="interviewAnswer"
+                placeholder="Type your answer here..."
+                rows="6"
+            ></textarea>
+
+
+            <button
+                id="submitAnswer"
+                class="primary-btn"
+            >
+                Submit Answer
+            </button>
+
+
+            <!-- Feedback -->
+
+            <div
+                id="interviewFeedback"
+                class="interview-feedback"
+                style="display:none;"
+            >
+
+                <h3>AI Feedback</h3>
+
+                <div class="feedback-score">
+                    <strong id="answerScore">0</strong>
+                    <span>/100</span>
+                </div>
+
+                <p id="feedbackText"></p>
+
+                <button
+                    id="nextQuestion"
+                    class="secondary-btn"
+                >
+                    Next Question
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =====================================================
+         CAREER DASHBOARD
+         Each card is a completely separate section
+    ====================================================== -->
+
+    <section class="career-dashboard">
+
+
+        <!-- ================= 1. CAREER ANALYSIS ================= -->
+
+        <div class="career-score-card">
+
+            <div class="dashboard-card-header">
+
+                <div>
+                    <span class="card-label">AI POWERED</span>
+
+                    <h2>Career Analysis</h2>
+
+                    <p>
+                        Your resume has been analyzed based on
+                        industry standards.
+                    </p>
+                </div>
+
+                <span class="ai-badge">✦ AI</span>
+
+            </div>
+
+
+            <div class="score-layout">
+
+                <div class="main-score">
+                    <strong id="careerScore">--%</strong>
+                    <span>Resume Score</span>
+                </div>
+
+
+                <div class="career-skills">
+
+                    <div class="career-skill">
+
+                        <div>
+                            <span>DSA</span>
+                            <strong id="dsaScore">--%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                class="progress-fill"
+                                id="dsaProgress"
+                                style="width:0%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="career-skill">
+
+                        <div>
+                            <span>Web Development</span>
+                            <strong id="webScore">--%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                class="progress-fill"
+                                id="webProgress"
+                                style="width:0%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="career-skill">
+
+                        <div>
+                            <span>Communication</span>
+                            <strong id="communicationScore">--%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                class="progress-fill"
+                                id="communicationProgress"
+                                style="width:0%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= 2. CAREER INSIGHT ================= -->
+
+        <div class="career-insight-card">
+
+            <div class="dashboard-title green-title">
+
+                <div class="dashboard-icon green-icon">
+                    ✦
+                </div>
+
+                <div>
+                    <span>AI INSIGHT</span>
+                    <h2>Career Insight</h2>
+                </div>
+
+            </div>
+
+            <p id="careerInsight">
+                Your career insight will appear here.
+            </p>
+
+        </div>
+
+
+        <!-- ================= 3. SKILL GAP ANALYSIS ================= -->
+
+        <div class="skill-gap-card">
+
+            <div class="dashboard-title blue-title">
+
+                <div class="dashboard-icon blue-icon">
+                    ▥
+                </div>
+
+                <div>
+                    <span>ANALYSIS</span>
+                    <h2>Skill Gap Analysis</h2>
+                </div>
+
+            </div>
+
+
+            <div class="skill-gap-grid">
+
+                <div class="skill-group have-skills">
+
+                    <h3>Skills You Have</h3>
+
+                    <ul id="skillsHave"></ul>
+
+                </div>
+
+
+                <div class="skill-group need-skills">
+
+                    <h3>Skills You Need</h3>
+
+                    <ul id="skillsNeed"></ul>
+
+                </div>
+
+
+                <div class="skill-group priority-skills">
+
+                    <h3>Priority Skills</h3>
+
+                    <ul id="prioritySkills"></ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= 4. INTERVIEW PREPARATION ================= -->
+
+        <div class="interview-card">
+
+            <div class="dashboard-title blue-title">
+
+                <div class="dashboard-icon blue-icon">
+                    ▣
+                </div>
+
+                <div>
+                    <span>PREPARATION</span>
+                    <h2>Interview Preparation</h2>
+                </div>
+
+            </div>
+
+
+            <p class="interview-description">
+                Practice these questions to prepare for your interviews.
+            </p>
+
+
+            <div class="interview-layout">
+
+                <ol id="interviewQuestions"></ol>
+
+
+                <div class="readiness-card">
+
+                    <h3>Interview Readiness</h3>
+
+                    <strong id="interviewReadiness">
+                        0%
+                    </strong>
+
+                    <div class="readiness-progress">
+
+                        <div
+                            class="readiness-fill"
+                            id="interviewProgress"
+                            style="width:0%;">
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Keep practicing to improve your score!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= 5. RECOMMENDED NEXT STEPS ================= -->
+
+        <div class="next-steps-card">
+
+            <div class="dashboard-title orange-title">
+
+                <div class="dashboard-icon orange-icon">
+                    🚀
+                </div>
+
+                <div>
+                    <span>YOUR ROADMAP</span>
+                    <h2>Recommended Next Steps</h2>
+                </div>
+
+            </div>
+
+
+            <ul id="nextSteps"></ul>
+
+        </div>
+
+
+    </section>
+
+        <!-- Resume Analyzer -->
+<section id="resume-analyzer" class="resume-analyzer">
+
+    <div class="section-heading">
+        <p>AI RESUME ANALYZER</p>
+        <h2>Analyze Your Resume</h2>
+    </div>
+
+    <div class="resume-container">
+
+        <div class="upload-box">
+
+            <h3>Upload Your Resume</h3>
+
+            <p>
+                Upload your resume in PDF format and let CareerAI
+                analyze your profile.
+            </p>
+
+            <label for="resumeFile" class="upload-btn">
+                Choose Resume
+            </label>
+
+            <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf"
+            >
+
+            <p id="fileName"></p>
+
+        </div>
+
+
+        <div class="job-box">
+
+            <h3>Target Job</h3>
+
+            <p>
+                Enter the role you're preparing for.
+            </p>
+
+            <input
+                type="text"
+                id="jobRole"
+                placeholder="Example: Software Engineer"
+            >
+
+            <button id="analyzeResume">
+                Analyze Resume
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Analysis Result -->
+
+    <div id="analysisResult" class="analysis-result">
+
+        <h3>Resume Analysis</h3>
+
+        <div class="analysis-score">
+            <strong id="resumeScore">--</strong>
+            <span>/100</span>
+        </div>
+
+        <div class="analysis-grid">
+
+            <div>
+                <h4>Strengths</h4>
+                <ul id="strengths"></ul>
+            </div>
+
+            <div>
+                <h4>Areas to Improve</h4>
+                <ul id="improvements"></ul>
+            </div>
+
+            <div>
+                <h4>Detected Skills</h4>
+                <ul id="detectedSkills"></ul>
+            </div>
+            
+            <div>
+                <h4>MissingSkills</h4>
+                <ul id="missingSkills"></ul>
+            </div>
+
+            <div>
+                <h4>Recommended Skills</h4>
+                <ul id="skills"></ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+
+            <div class="section-heading">
+                <p>WHAT CAREERAI OFFERS</p>
+                <h2>Everything You Need to Prepare</h2>
+            </div>
+
+            <div class="feature-container">
+
+                <div class="feature-card">
+                    <div class="feature-icon">01</div>
+                    <h3>Resume Analyzer</h3>
+                    <p>
+                        Get an AI-powered analysis of your resume,
+                        including strengths, weaknesses and missing
+                        keywords.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">02</div>
+                    <h3>Skill Gap Analysis</h3>
+                    <p>
+                        Compare your current skills with your target
+                        job and discover what you need to learn next.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">03</div>
+                    <h3>AI Mock Interview</h3>
+                    <p>
+                        Practice technical and behavioral interviews
+                        and receive AI-generated feedback.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works">
+
+            <div class="section-heading">
+                <p>HOW IT WORKS</p>
+                <h2>Your Career Preparation in 3 Steps</h2>
+            </div>
+
+            <div class="steps">
+
+                <div class="step">
+                    <span>01</span>
+                    <h3>Upload Your Resume</h3>
+                    <p>
+                        Provide your resume and target job description.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span>02</span>
+                    <h3>Get AI Analysis</h3>
+                    <p>
+                        CareerAI analyzes your profile and identifies
+                        areas for improvement.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span>03</span>
+                    <h3>Improve & Practice</h3>
+                    <p>
+                        Follow personalized recommendations and
+                        practice interviews.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 CareerAI. Built for smarter career preparation.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
